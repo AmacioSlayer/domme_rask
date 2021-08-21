@@ -1,5 +1,5 @@
 <template>
-  <div id="#app">
+  <div class="style_inter" id="#app">
     <SideMenu />
     <TableRequests :table_data="REQUESTS" />
   </div>
@@ -40,7 +40,7 @@ html {
     font-family: "Inter var", sans-serif;
   }
 }
-body {
+.style_inter {
   font-family: "Inter";
   font-style: normal;
   text-align: left;
@@ -48,11 +48,13 @@ body {
   line-height: 17px;
   font-weight: 500;
   letter-spacing: 0em;
-
+}
+body {
   width: 1440px;
   height: 900px;
   border: 1px solid #f0f0f3;
-  border-radius: 10px;
+  border-radius: 14px;
+  background: #ffffff;
 }
 #app {
   font-family: "Inter";
