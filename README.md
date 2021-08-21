@@ -5,11 +5,6 @@
 npm install
 ```
 
-### Run database from db.json file (for first table)
-```
-json-server --watch db.json
-```
-
 ### Compiles and hot-reloads for development
 ```
 npm run serve
