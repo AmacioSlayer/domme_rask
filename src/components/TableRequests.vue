@@ -38,18 +38,20 @@
     </header>
     <div class="menu_filter">
       <div class="container">
-        <b-nav class="filter_tabs">
-          <b-nav-item active>Все (184)</b-nav-item>
-          <b-nav-item>Новые (32)</b-nav-item>
-          <b-nav-item>Важные (32)</b-nav-item>
-          <b-nav-item>В ожидании (32)</b-nav-item>
-          <b-nav-item>В процессе (32)</b-nav-item>
-          <b-nav-item>Просрочено (32)</b-nav-item>
-          <b-nav-item>Решенные (32)</b-nav-item>
-          <b-nav-item>Отклоненные (32)</b-nav-item>
-        </b-nav>
-        <div class="ml-auto as-center">
-          <b-button>Создать заявку</b-button>
+        <div class="menu_filter_flex">
+          <b-nav class="filter_tabs">
+            <b-nav-item active>Все (184)</b-nav-item>
+            <b-nav-item>Новые (32)</b-nav-item>
+            <b-nav-item>Важные (32)</b-nav-item>
+            <b-nav-item>В ожидании (32)</b-nav-item>
+            <b-nav-item>В процессе (32)</b-nav-item>
+            <b-nav-item>Просрочено (32)</b-nav-item>
+            <b-nav-item>Решенные (32)</b-nav-item>
+            <b-nav-item>Отклоненные (32)</b-nav-item>
+          </b-nav>
+          <div class="filter_button ml-auto as-center">
+            <b-button>Создать заявку</b-button>
+          </div>
         </div>
       </div>
     </div>
@@ -101,9 +103,6 @@ export default {
 </script>
 
 <style>
-.filter_tabs .nav-link {
-  padding: 6px 12px;
-}
 .content {
   margin-left: 175px;
 }
@@ -150,12 +149,28 @@ export default {
 .as-center {
   align-self: center;
 }
-.button {
-  color: #5b6cff;
-  border-radius: 8px;
-}
 .menu_filter {
+  border-bottom: 1px solid #f0f0f3;
+}
+.menu_filter_flex {
   margin: 18px;
+  display: flex;
+  align-items: center;
+}
+.filter_tabs .nav-link {
+  color: #2a2e52;
+  opacity: 0.6;
+  padding: 0 24px 0 0;
+}
+.filter_button .btn {
+  background: #5b6cff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 2px;
+  padding: 13px 18px;
+  color: #ffffff;
 }
 .tableWithRequests {
   min-width: 900px;
