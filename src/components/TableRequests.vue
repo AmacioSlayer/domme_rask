@@ -3,35 +3,27 @@
     <header class="header">
       <div class="container">
         <b-navbar toggleable="lg">
-          <b-navbar-brand href="#">
-            <div class="icon_galamshar">
-              <img
-                class="icon_house"
-                src="@/assets/icon_house.png"
-                alt="icon_house"
-              />
-              <img
-                class="icon_house_bg"
-                src="@/assets/icon_house_bg.png"
-                alt="icon_house"
-              />
-              <div class="galamshar">
-                <b-navbar-nav>
-                  <b-nav-item>ЖК "Galamshar"</b-nav-item>
-                  <b-nav-item href="#">Выбрать другой</b-nav-item>
-                </b-navbar-nav>
-              </div>
+          <div class="residence_info">
+            <div class="icon_house_bg"></div>
+            <img
+              class="icon_house"
+              src="@/assets/icon_house.png"
+              alt="icon_house"
+            />
+            <div class="residence_title">
+              <div class="residence">ЖК "Galamshar"</div>
+              <a class="residence_another" href="#">Выбрать другой</a>
             </div>
-          </b-navbar-brand>
+          </div>
           <b-navbar-nav class="ml-auto">
-            <b-nav-item-dropdown class="as-center" no-caret>
+            <b-nav-item-dropdown class="notifications as-center" no-caret>
               <template #button-content>
                 <img src="@/assets/bell.png" alt="messages" />
               </template>
-              <b-dropdown-item href="#">Сообщение №1</b-dropdown-item>
-              <b-dropdown-item href="#">Сообщение №2</b-dropdown-item>
-              <b-dropdown-item href="#">Сообщение №3</b-dropdown-item>
-              <b-dropdown-item href="#">Сообщение №4</b-dropdown-item>
+              <b-dropdown-item href="#">Уведомление №1</b-dropdown-item>
+              <b-dropdown-item href="#">Уведомление №2</b-dropdown-item>
+              <b-dropdown-item href="#">Уведомление №3</b-dropdown-item>
+              <b-dropdown-item href="#">Уведомление №4</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown class="as-center" no-caret>
               <template #button-content>
@@ -61,7 +53,7 @@
         </div>
       </div>
     </div>
-    <div class="menu_search"></div>
+    <div class="menu_search"><div class="container"></div></div>
     <!-- <table class="tableWithRequests">
       <tr class="table_head">
         <td class="table_head_data">№</td>
@@ -115,19 +107,42 @@ export default {
 .content {
   margin-left: 175px;
 }
-.contain_er {
-  margin: 0 28px;
-}
 .header {
-  padding: 0 10px;
+  padding: 0 10px 0 18px;
   border-bottom: 1px solid #f0f0f3;
 }
-.icon_house {
-  padding: 14px;
+.icon_house_bg {
+  width: 48px;
+  height: 48px;
+  background: #5b6cff;
+  opacity: 0.07;
+  border-radius: 8px;
   position: absolute;
 }
-.icon_house_bg {
+.icon_house {
+  padding: 13px 14px;
   position: relative;
+}
+.residence_info {
+  display: flex;
+  align-items: center;
+}
+.residence_title {
+  margin-left: 12px;
+}
+.residence {
+  font-weight: bold;
+}
+.residence_another {
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  align-items: center;
+  color: #2a2e52;
+  opacity: 0.6;
+}
+.notifications {
+  margin-right: 14px;
 }
 .ml-auto {
   margin-left: auto;
