@@ -3,6 +3,26 @@
     <header class="header">
       <div class="container">
         <b-navbar toggleable="lg">
+          <b-navbar-brand href="#">
+            <div class="icon_galamshar">
+              <img
+                class="icon_house"
+                src="@/assets/icon_house.png"
+                alt="icon_house"
+              />
+              <img
+                class="icon_house_bg"
+                src="@/assets/icon_house_bg.png"
+                alt="icon_house"
+              />
+              <div class="galamshar">
+                <b-navbar-nav>
+                  <b-nav-item>ЖК "Galamshar"</b-nav-item>
+                  <b-nav-item href="#">Выбрать другой</b-nav-item>
+                </b-navbar-nav>
+              </div>
+            </div>
+          </b-navbar-brand>
           <b-navbar-nav class="ml-auto">
             <b-nav-item-dropdown class="as-center" no-caret>
               <template #button-content>
@@ -26,20 +46,18 @@
     </header>
     <div class="menu_filter">
       <div class="container">
-        <div>
-          <b-list-group horizontal>
-            <b-list-group-item>Все (184)</b-list-group-item>
-            <b-list-group-item>Новые (32)</b-list-group-item>
-            <b-list-group-item>Важные (32)</b-list-group-item>
-            <b-list-group-item>В ожидании (32)</b-list-group-item
-            ><b-list-group-item>В процессе (32)</b-list-group-item
-            ><b-list-group-item>Просрочено (32)</b-list-group-item
-            ><b-list-group-item>Решенные (32)</b-list-group-item
-            ><b-list-group-item>Отклоненные (32)</b-list-group-item>
-            <div class="ml-auto as-center">
-              <b-button>Создать заявку</b-button>
-            </div>
-          </b-list-group>
+        <b-nav class="filter_tabs">
+          <b-nav-item active>Все (184)</b-nav-item>
+          <b-nav-item>Новые (32)</b-nav-item>
+          <b-nav-item>Важные (32)</b-nav-item>
+          <b-nav-item>В ожидании (32)</b-nav-item>
+          <b-nav-item>В процессе (32)</b-nav-item>
+          <b-nav-item>Просрочено (32)</b-nav-item>
+          <b-nav-item>Решенные (32)</b-nav-item>
+          <b-nav-item>Отклоненные (32)</b-nav-item>
+        </b-nav>
+        <div class="ml-auto as-center">
+          <b-button>Создать заявку</b-button>
         </div>
       </div>
     </div>
@@ -91,15 +109,25 @@ export default {
 </script>
 
 <style>
+.filter_tabs .nav-link {
+  padding: 6px 12px;
+}
 .content {
   margin-left: 175px;
+}
+.contain_er {
+  margin: 0 28px;
 }
 .header {
   padding: 0 10px;
   border-bottom: 1px solid #f0f0f3;
 }
-.contain_er {
-  margin: 0 28px;
+.icon_house {
+  padding: 14px;
+  position: absolute;
+}
+.icon_house_bg {
+  position: relative;
 }
 .ml-auto {
   margin-left: auto;
