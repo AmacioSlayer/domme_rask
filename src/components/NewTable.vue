@@ -1,5 +1,6 @@
 <template>
-  <section>
+  <div>
+    <!-- head-variant="secondary" doesn't work -->
     <b-table
       :sticky-header="stickyHeader"
       :no-border-collapse="noCollapse"
@@ -7,6 +8,7 @@
       :items="items"
       :fields="fields"
     >
+      <!-- We are using utility class `text-nowrap` to help illustrate horizontal scrolling -->
       <template #head(id)="">
         <div class="text-nowrap">№</div>
       </template>
@@ -14,7 +16,7 @@
         <div class="text-nowrap">{{ scope.label }}</div>
       </template>
     </b-table>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -28,7 +30,6 @@ export default {
           key: "id",
           stickyColumn: true,
           isRowHeader: true,
-          variant: "primary",
         },
         "Локация",
         "Статус",

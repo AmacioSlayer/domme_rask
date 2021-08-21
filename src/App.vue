@@ -31,14 +31,31 @@ export default {
 </script>
 
 <style>
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
 body {
+  font-family: "Inter";
+  font-style: normal;
+  text-align: left;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  letter-spacing: 0em;
+
   width: 1440px;
   height: 900px;
   border: 1px solid #f0f0f3;
   border-radius: 10px;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
