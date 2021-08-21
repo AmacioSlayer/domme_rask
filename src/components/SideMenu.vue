@@ -38,10 +38,10 @@ export default {
   border: 1px solid #f0f0f3;
 }
 .menu_logo {
-  margin: 26px 35px 26px 30px;
+  margin: 26px 35px 25px 30px;
 }
 .menu_line {
-  width: 175px;
+  width: 174px;
   height: 1px;
   background-color: #f0f0f3;
   /* border-top: 1px solid #f0f0f3; */
