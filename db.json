@@ -6,76 +6,76 @@
       "status": "В ожидании",
       "type": "Жалоба",
       "description": "Открыть",
-      "performer": "Андрей",
-      "dateOfRequest": "01.01.2021",
-      "dateOfCompletion": "02.01.2021",
-      "sender": "Алексей"
+      "performer": "",
+      "dateOfRequest": "03.10.2020 в 18:00",
+      "dateOfCompletion": "",
+      "sender": "Медет Сисенгалиев"
     },
     {
       "requestNumber": 2,
-      "location": "Квартира",
-      "status": "В ожидании",
-      "type": "Жалоба",
+      "location": "Подъезд",
+      "status": "Решено",
+      "type": "Предложение",
       "description": "Открыть",
-      "performer": "Андрей",
-      "dateOfRequest": "01.01.2021",
-      "dateOfCompletion": "02.01.2021",
-      "sender": "Алексей"
+      "performer": "Андрей Сергеевич",
+      "dateOfRequest": "03.10.2020 в 18:00",
+      "dateOfCompletion": "03.10.2020 в 18:00",
+      "sender": "Медет Сисенгалиев"
     },
     {
       "requestNumber": 3,
-      "location": "Квартира",
-      "status": "В ожидании",
+      "location": "Двор",
+      "status": "В процессе",
       "type": "Жалоба",
       "description": "Открыть",
-      "performer": "Андрей",
-      "dateOfRequest": "01.01.2021",
-      "dateOfCompletion": "02.01.2021",
-      "sender": "Алексей"
+      "performer": "Райымбек Батыр",
+      "dateOfRequest": "03.10.2020 в 18:00",
+      "dateOfCompletion": "",
+      "sender": "Райымбек Таир"
     },
     {
       "requestNumber": 4,
-      "location": "Квартира",
+      "location": "Паркинг",
       "status": "В ожидании",
-      "type": "Жалоба",
+      "type": "Предложение",
       "description": "Открыть",
-      "performer": "Андрей",
-      "dateOfRequest": "01.01.2021",
-      "dateOfCompletion": "02.01.2021",
-      "sender": "Алексей"
+      "performer": "",
+      "dateOfRequest": "03.10.2020 в 18:00",
+      "dateOfCompletion": "",
+      "sender": "Андро Земский"
     },
     {
       "requestNumber": 5,
-      "location": "Квартира",
+      "location": "Коммерция",
       "status": "В ожидании",
       "type": "Жалоба",
       "description": "Открыть",
-      "performer": "Андрей",
-      "dateOfRequest": "01.01.2021",
-      "dateOfCompletion": "02.01.2021",
-      "sender": "Алексей"
+      "performer": "",
+      "dateOfRequest": "03.10.2020 в 18:00",
+      "dateOfCompletion": "",
+      "sender": "Райымбек Таир"
     },
     {
       "requestNumber": 6,
-      "location": "Квартира",
-      "status": "В ожидании",
+      "location": "Двор",
+      "status": "Отклонен",
       "type": "Жалоба",
       "description": "Открыть",
-      "performer": "Андрей",
-      "dateOfRequest": "01.01.2021",
-      "dateOfCompletion": "02.01.2021",
-      "sender": "Алексей"
+      "performer": "Медет Цина",
+      "dateOfRequest": "03.10.2020 в 18:00",
+      "dateOfCompletion": "03.10.2020 в 18:00",
+      "sender": "Медет Сисенгалиев"
     },
     {
       "requestNumber": 7,
-      "location": "Квартира",
-      "status": "В ожидании",
-      "type": "Жалоба",
+      "location": "Двор",
+      "status": "Просрочено",
+      "type": "Предложение",
       "description": "Открыть",
-      "performer": "Андрей",
-      "dateOfRequest": "01.01.2021",
-      "dateOfCompletion": "02.01.2021",
-      "sender": "Алексей"
+      "performer": "Андро Земский",
+      "dateOfRequest": "03.10.2020 в 18:00",
+      "dateOfCompletion": "",
+      "sender": "Андро Земский"
     }
   ]
 }

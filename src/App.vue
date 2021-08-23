@@ -7,8 +7,8 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import SideMenu from "./components/SideMenu";
-import TableRequests from "./components/TableRequests";
+import SideMenu from "./components/SideMenu.vue";
+import TableRequests from "./components/TableRequests.vue";
 export default {
   name: "App",
   components: {
@@ -49,13 +49,13 @@ html {
   font-weight: 500;
   letter-spacing: 0em;
 }
-body {
+/* body {
   width: 1440px;
   height: 900px;
   border: 1px solid #f0f0f3;
   border-radius: 14px;
   background: #ffffff;
-}
+} */
 #app {
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;

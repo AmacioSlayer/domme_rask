@@ -1,5 +1,10 @@
 <template>
   <div class="tableRequests">
+    <tr class="row row_icon">
+      {{
+        row_data.icon
+      }}
+    </tr>
     <tr class="row row_id">
       {{
         row_data.requestNumber
@@ -21,9 +26,7 @@
       }}
     </tr>
     <tr class="row row_description">
-      {{
-        row_data.description
-      }}
+      <b-button v-b-modal.1>{{ row_data.description }}</b-button>
     </tr>
     <tr class="row row_performer">
       {{
@@ -70,13 +73,5 @@ export default {
 * {
   margin: 0;
   padding: 0;
-}
-.tableRequests {
-  display: flex;
-  justify-content: space-around;
-}
-.row {
-  flex-basis: 10%;
-  text-align: left;
 }
 </style>
