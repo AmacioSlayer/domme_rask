@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .menu_filter {
   padding: 18px;
   border-bottom: 1px solid #f0f0f3;
@@ -30,9 +30,34 @@
   align-items: center;
 }
 .filter_tabs .nav-link {
-  color: #2a2e52;
-  opacity: 0.6;
+  line-height: 27px;
   padding: 0 24px 0 0;
+  color: rgba(42, 46, 82, 0.6);
+}
+.nav-link:hover {
+  color: rgba(42, 46, 82, 0.4) !important;
+  background-image: linear-gradient(
+    90deg,
+    rgba(91, 108, 255, 0.4) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-size: 2px 2px;
+  background-repeat: repeat-x;
+  background-clip: content-box;
+  background-position-y: bottom;
+}
+.nav-link:active,
+.nav-link:focus {
+  color: rgba(42, 46, 82, 1) !important;
+  background-image: linear-gradient(
+    90deg,
+    rgba(91, 108, 255, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-size: 2px 2px;
+  background-repeat: repeat-x;
+  background-clip: content-box;
+  background-position-y: bottom;
 }
 .request_button .btn {
   background: #5b6cff;

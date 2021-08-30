@@ -49,13 +49,14 @@ html {
   font-weight: 500;
   letter-spacing: 0em;
 }
-/* body {
-  width: 1440px;
+body {
+  margin: 0 auto !important;
+  max-width: 1440px;
   height: 900px;
   border: 1px solid #f0f0f3;
   border-radius: 14px;
   background: #ffffff;
-} */
+}
 #app {
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;

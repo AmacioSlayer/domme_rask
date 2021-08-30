@@ -49,9 +49,10 @@
           </template>
         </b-table>
       </div> -->
-      <b-container fluid>
+      <b-container>
         <b-table
-          class="table_style"
+          class="table table_style"
+          responsive
           :items="items"
           :fields="fields"
           :filter="filter"
@@ -63,9 +64,8 @@
           <!-- Modal button -->
           <template #cell(description)="row">
             <b-button
-              size="sm"
               @click="info(row.item, $event.target)"
-              class="mr-1"
+              class="table_button"
             >
               Открыть
             </b-button>
@@ -91,6 +91,7 @@ export default {
     return {
       fields: [
         // need to import icons from Figma
+        { key: "icon", label: "" },
         { key: "requestNumber", label: "№", isRowHeader: true },
         { key: "location", label: "Локация" },
         { key: "status", label: "Статус" },
@@ -103,6 +104,7 @@ export default {
       ],
       items: [
         {
+          icon: "icons",
           requestNumber: 1,
           location: "Квартира",
           status: "В ожидании",
@@ -114,6 +116,7 @@ export default {
           sender: "Медет Сисенгалиев",
         },
         {
+          icon: "icons",
           requestNumber: 2,
           location: "Подъезд",
           status: "Решено",
@@ -125,6 +128,7 @@ export default {
           sender: "Медет Сисенгалиев",
         },
         {
+          icon: "icons",
           requestNumber: 3,
           location: "Двор",
           status: "В процессе",
@@ -136,6 +140,7 @@ export default {
           sender: "Райымбек Таир",
         },
         {
+          icon: "icons",
           requestNumber: 4,
           location: "Паркинг",
           status: "В ожидании",
@@ -147,6 +152,7 @@ export default {
           sender: "Андро Земский",
         },
         {
+          icon: "icons",
           requestNumber: 5,
           location: "Коммерция",
           status: "В ожидании",
@@ -158,6 +164,7 @@ export default {
           sender: "Райымбек Таир",
         },
         {
+          icon: "icons",
           requestNumber: 6,
           location: "Двор",
           status: "Отклонен",
@@ -169,6 +176,7 @@ export default {
           sender: "Медет Сисенгалиев",
         },
         {
+          icon: "icons",
           requestNumber: 7,
           location: "Двор",
           status: "Просрочено",
@@ -196,7 +204,7 @@ export default {
   },
   methods: {
     info(item, button) {
-      this.infoModal.title = item.requestNumber; // `Row index: ${index}`;
+      this.infoModal.title = item.requestNumber;
       this.infoModal.content = JSON.stringify(item, null, 2);
       this.$root.$emit("bv::show::modal", this.infoModal.id, button);
     },
@@ -210,7 +218,6 @@ export default {
 
 <style>
 /* .table_and_search {
-
 } */
 .menu_search {
   padding: 10px 18px;
@@ -249,7 +256,7 @@ export default {
   border: 1px solid #eaeaf3;
   box-sizing: border-box;
   border-radius: 8px;
-  padding: 12px;
+  padding: 12px 12px 12px 16px;
   display: flex;
 }
 .filter_text {
@@ -259,27 +266,66 @@ export default {
   color: #2a2e52;
 }
 .filter_sliders {
-  padding-left: 12px;
+  padding-left: 45px;
   align-self: center;
 }
 .table_only {
   padding: 30px 18px 30px 16px;
 }
-.table_style {
-  margin: 0 auto;
-  border: 1px solid #f0f0f3;
-  background: #ffffff;
+.table-responsive {
+  /* this gradient doesn't work */
+  background-image: linear-gradient(
+    270deg,
+    #ffffff 18.73%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 28px 28px;
+  background-repeat: repeat-y;
+  background-position-x: right;
 }
-.table_style table {
-  color: #2a2e52;
-  border: 1px solid #f0f0f3;
-  box-sizing: border-box;
-  border-radius: 8px;
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: #f0f0f3 !important;
 }
-.table_style thead {
+.table-sm > :not(caption) > * > * {
+  padding: 0 40px 0 20px !important;
+}
+table {
+  color: #2a2e52 !important;
+  border: 1px solid #f0f0f3 !important;
+}
+tbody {
+  vertical-align: middle !important;
+}
+thead {
+  vertical-align: middle !important;
   background: rgba(42, 46, 82, 0.07);
+  color: rgba(42, 46, 82, 0.6) !important;
 }
-tr {
+th {
+  font-weight: 500 !important;
+}
+[role="columnheader"] {
+  height: 42px;
+}
+[role="rowheader"] {
   height: 62px;
+}
+[role="row"]:hover {
+  background: rgba(91, 108, 255, 0.07);
+}
+.table_button {
+  font-family: "Inter";
+  font-style: normal;
+  text-align: left !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0em !important;
+  padding: 0 !important;
+  color: #2a2e52 !important;
+  background: none !important;
+  border: none !important;
+  border-bottom: 1px dashed rgba(42, 46, 82, 0.4) !important;
+  border-radius: 0 !important;
 }
 </style>
